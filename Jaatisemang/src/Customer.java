@@ -5,4 +5,8 @@ public class Customer {
     private List<String> likedIceCreams;
     private String name;
 
+    public static void buyIceCream(){
+
+    }
+
 }
