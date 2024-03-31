@@ -6,9 +6,11 @@ public class Main {
     //private static String startMessage = "Et mängu käivitada, vajuta X-i.";
     //Nii saaks muuta mängu keelt, aga ilmselt on mingi lihtsam viis
     public static void main(String[] args) {
-
+        //praegu testimiseks, hiljem tuleks siia main gameplay loopi jaoks vajalikud commandid jms
+        Player player = new Player(100, "Toomas");
         System.out.println(startMessage);
-        currentMoney = 100;
-        System.out.println(currentMoney);
+        System.out.println(player.getName());
+        System.out.println();
+        System.out.println(player.getCurrentMoney());
     }
 }

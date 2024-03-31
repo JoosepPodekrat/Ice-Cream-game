@@ -3,11 +3,19 @@ import java.util.List;
 public class Player {
     private double currentMoney;
     private String name;
-    private List<String> ownedIceCreams;
 
-    public Player(double currentMoney, String name, List<String> ownedIceCreams) {
+
+    public Player(double currentMoney, String name) {
         this.currentMoney = currentMoney;
         this.name = name;
-        this.ownedIceCreams = ownedIceCreams;
+
+    }
+
+    public double getCurrentMoney() {
+        return currentMoney;
+    }
+
+    public String getName() {
+        return name;
     }
 }
