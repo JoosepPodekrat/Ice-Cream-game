@@ -26,7 +26,7 @@ public class Balbiino {
             int arv = Integer.parseInt(JOptionPane.showInputDialog(null,
                     "Palju Vanilje jäätist soovid osta.\n" +
                             "Hind: "+Vanilla_Sell_price+"\n"+
-                            "(Kui soovitud arvu otmiseks raha ei ole, ostetakse maksimaalne arv, mis olemasoleva rahaga osta saab.)",
+                            "(Kui soovitud arvu ostmiseks raha ei ole, ostetakse maksimaalne arv, mis olemasoleva rahaga osta saab.)",
                     "Jäätisemäng",
                     JOptionPane.QUESTION_MESSAGE));
             player.buyVanilla(this,arv);
@@ -34,7 +34,7 @@ public class Balbiino {
             int arv = Integer.parseInt(JOptionPane.showInputDialog(null,
                     "Palju Šokolaadi jäätist soovid osta.\n" +
                             "Hind: "+Choco_Sell_price+"\n"+
-                            "(Kui soovitud arvu otmiseks raha ei ole, ostetakse maksimaalne arv, mis olemasoleva rahaga osta saab.)",
+                            "(Kui soovitud arvu ostmiseks raha ei ole, ostetakse maksimaalne arv, mis olemasoleva rahaga osta saab.)",
                     "Jäätisemäng",
                     JOptionPane.QUESTION_MESSAGE));
             player.buyChoco(this,arv);
@@ -42,7 +42,7 @@ public class Balbiino {
             int arv = Integer.parseInt(JOptionPane.showInputDialog(null,
                     "Palju Mahlapulki soovid osta.\n" +
                             "Hind: "+Popsicle_Sell_price+"\n"+
-                            "(Kui soovitud arvu otmiseks raha ei ole, ostetakse maksimaalne arv, mis olemasoleva rahaga osta saab.)",
+                            "(Kui soovitud arvu ostmiseks raha ei ole, ostetakse maksimaalne arv, mis olemasoleva rahaga osta saab.)",
                     "Jäätisemäng",
                     JOptionPane.QUESTION_MESSAGE));
             player.buyPopsicle(this,arv);

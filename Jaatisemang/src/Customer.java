@@ -16,5 +16,10 @@ public class Customer {
         player.Bought(likedIceCream,WillingToBuy,MaxPrice);
     }
 
+    @Override
+    public String toString(){
+        return likedIceCream+"on lemmik ja on nõus ostma "+WillingToBuy;
+    }
+
 
 }

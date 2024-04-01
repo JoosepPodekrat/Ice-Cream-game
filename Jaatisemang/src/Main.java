@@ -35,25 +35,27 @@ public class Main {
             while (days+1>daycounter){ // Main LOOP
                 player.ResetDaily();
                 events.DisplayAndSetEvents(balbiino);
+                Customer[] customers = events.GenerateCustomers().toArray(new Customer[0]);
                 int choice = -1;
                 while (choice != 2) { //Kuni müüma pole mindud ei tule uut päeva;
                     choice = player.DisplayPlayerScreen(balbiino,daycounter);
                     if (choice == 0) { //Osta jäätist
                         balbiino.BuyIceCream(player);
                     } else if (choice == 1) { // Muuda müügihinda
-                        System.out.println("muuda");
+                        player.ChangePrices();
                     } else { //Mine müüma
                         daycounter++;
                     }
                 }
-                Customer[] customers = events.GenerateCustomers().toArray(new Customer[0]);
 
                 for (Customer customer:customers) {//Jäätise müümine
                     customer.buyIceCream(player);
+                    //System.out.println(customer);
                 }
                 player.DailyReport();
 
             }
+            player.EndReport();
         }
     }
 }

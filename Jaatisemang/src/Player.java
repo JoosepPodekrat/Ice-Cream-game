@@ -93,6 +93,39 @@ public class Player {
         PopsicleNr += kogus;
     }
 
+    public void ChangePrices(){
+        String[] options = {"Vanilje","Šokolaad","Mahlapulk"};
+        int option = JOptionPane.showOptionDialog(null,
+                "Millise jäätise hinda soovid muuta?",
+                "Jäätisemäng",
+                JOptionPane.YES_NO_CANCEL_OPTION,
+                JOptionPane.QUESTION_MESSAGE,
+                null,
+                options,
+                0);
+
+
+        if (option == 0){
+            double arv = Double.parseDouble(JOptionPane.showInputDialog(null,
+                    "Sisesta Vanilje jäätiste uushind",
+                    "Jäätisemäng",
+                    JOptionPane.QUESTION_MESSAGE));
+            Vanilla_price = arv;
+        } else if (option == 1) {
+            double arv = Double.parseDouble(JOptionPane.showInputDialog(null,
+                    "Sisesta Šokolaadi jäätiste uushind",
+                    "Jäätisemäng",
+                    JOptionPane.QUESTION_MESSAGE));
+            Choco_price = arv;
+        } else {
+            double arv = Double.parseDouble(JOptionPane.showInputDialog(null,
+                    "Sisesta Mahlapulkade uushind",
+                    "Jäätisemäng",
+                    JOptionPane.QUESTION_MESSAGE));
+            Popsicle_price = arv;
+        }
+    }
+
     public void ResetDaily(){
         SoldChoco = 0;
         SoldPopsicle = 0;
@@ -108,9 +141,18 @@ public class Player {
                 SoldPopsicle+" Mahlapulka\n" +
                 "Ja teenisid "+Math.round(DailyMoneyMade * 100.0)/100.0 +" eurot.");
     }
+
+    public void EndReport(){
+        JOptionPane.showMessageDialog(null,"Müügikorra raport:\n" +
+                "Sul jäi alles \n" +
+                VanillaNr+" Vanilje jäätist\n" +
+                ChocoNr+" Šokolaadi jäätist\n" +
+                PopsicleNr+" Mahlapulka\n" +
+                "Ja teenisid kasumit "+Math.round((currentMoney-50.0) * 100.0)/100.0 +" eurot.");
+    }
     public void Bought(String ice_cream, int WillingToBuy,double MaxPrice){
         if(ice_cream.equals("Choco")){
-            if (Choco_price>=MaxPrice){
+            if (Choco_price<=MaxPrice){
                 if (ChocoNr >= WillingToBuy) {
                     ChocoNr -= WillingToBuy;
                     currentMoney += WillingToBuy * Choco_price;
@@ -125,7 +167,7 @@ public class Player {
             }
 
         } else if (ice_cream.equals("Vanilla")) {
-            if (Vanilla_price>=MaxPrice){
+            if (Vanilla_price<=MaxPrice){
                 if (VanillaNr >= WillingToBuy) {
                     VanillaNr -= WillingToBuy;
                     currentMoney += WillingToBuy * Vanilla_price;
@@ -139,7 +181,7 @@ public class Player {
                 }
             }
         } else {
-            if (Popsicle_price>=MaxPrice){
+            if (Popsicle_price<=MaxPrice){
                 if (PopsicleNr >= WillingToBuy) {
                     PopsicleNr -= WillingToBuy;
                     currentMoney += WillingToBuy * Popsicle_price;
