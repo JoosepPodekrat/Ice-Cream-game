@@ -148,7 +148,7 @@ public class Player {
                 VanillaNr+" Vanilje jäätist\n" +
                 ChocoNr+" Šokolaadi jäätist\n" +
                 PopsicleNr+" Mahlapulka\n" +
-                "Ja teenisid kasumit "+Math.round((currentMoney-50.0) * 100.0)/100.0 +" eurot.");
+                "Kasum:  "+Math.round((currentMoney-50.0) * 100.0)/100.0 +" eurot.");
     }
     public void Bought(String ice_cream, int WillingToBuy,double MaxPrice){
         if(ice_cream.equals("Choco")){
