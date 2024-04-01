@@ -161,7 +161,7 @@ public class Player {
                 } else {
                     currentMoney += ChocoNr * Choco_price;//Puudumise puhul ei tule raha juurde 0*x
                     SoldChoco += ChocoNr;
-                    DailyMoneyMade = ChocoNr * Choco_price;
+                    DailyMoneyMade += ChocoNr * Choco_price;
                     ChocoNr -= ChocoNr;
                 }
             }
@@ -176,7 +176,7 @@ public class Player {
                 } else {
                     currentMoney += VanillaNr * Vanilla_price;//Puudumise puhul ei tule raha juurde 0*x
                     SoldVanilla += VanillaNr;
-                    DailyMoneyMade = VanillaNr * Vanilla_price;
+                    DailyMoneyMade += VanillaNr * Vanilla_price;
                     VanillaNr -= VanillaNr;
                 }
             }
@@ -190,7 +190,7 @@ public class Player {
                 } else {
                     currentMoney += PopsicleNr * Popsicle_price;//Puudumise puhul ei tule raha juurde 0*x
                     SoldPopsicle += PopsicleNr;
-                    DailyMoneyMade = PopsicleNr * Popsicle_price;
+                    DailyMoneyMade += PopsicleNr * Popsicle_price;
                     PopsicleNr -= PopsicleNr;
                 }
             }
