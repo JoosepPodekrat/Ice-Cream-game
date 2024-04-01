@@ -15,19 +15,19 @@ public class Events {
     public List<Customer> GenerateCustomers(){
         List<Customer> customers = new ArrayList<Customer>();
         Random random = new Random();
-        String prefferd;
+        String preferred;
         for (int i = 0; i < customerNr; i++) {
-            int prefrance = random.nextInt(3);
+            int preference = random.nextInt(3);
             double pops_multiplier = 1;
-            if (prefrance == 0){
-                prefferd = "Choco";
-            } else if (prefrance == 1) {
-                prefferd = "Vanilla";
+            if (preference == 0){
+                preferred = "Choco";
+            } else if (preference == 1) {
+                preferred = "Vanilla";
             } else {
                 pops_multiplier = 0.75;
-                prefferd = "Popsicle";
+                preferred = "Popsicle";
             }
-            customers.add(new Customer(prefferd,random.nextInt(1,3),random.nextDouble(pops_multiplier*customerMax*0.9,pops_multiplier*customerMax*1.1)));
+            customers.add(new Customer(preferred,random.nextInt(1,3),random.nextDouble(pops_multiplier*customerMax*0.9,pops_multiplier*customerMax*1.1)));
         }
 
         return customers;
