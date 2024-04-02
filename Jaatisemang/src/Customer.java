@@ -6,10 +6,17 @@ public class Customer {
     private  String name;
 
 
+<<<<<<< Updated upstream
     public Customer(double money, List<String> likedIceCreams, String name) {
         this.money = money;
         this.likedIceCreams = likedIceCreams;
         this.name = name;
+=======
+    public Customer(String likedIceCream,int WillingToBuy,double MaxPrice) {
+        this.likedIceCream = likedIceCream;// Milline jäätis meeldib
+        this.WillingToBuy = WillingToBuy;// Mitu on nõus ostma korraga
+        this.MaxPrice = MaxPrice;// Max hind, millega on nõus ostma
+>>>>>>> Stashed changes
     }
 
     public void buyIceCream(IceCream iceCream){
