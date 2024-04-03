@@ -1,14 +1,53 @@
 import java.util.List;
+import javax.swing.JOptionPane;
 
 public class Player {
     private double currentMoney;
     private String name;
+
+    private int VanillaNr = 0;
+    private int ChocoNr = 0;
+    private int PopsicleNr = 0;
+    private double Vanilla_price;
+    private double Choco_price;
+    private double Popsicle_price;
+
+    private int SoldVanilla;
+    private int SoldChoco;
+    private int SoldPopsicle;
+    private double DailyMoneyMade;
 
 
     public Player(double currentMoney, String name) {
         this.currentMoney = currentMoney;
         this.name = name;
 
+    }
+
+    public int DisplayPlayerScreen(Balbiino balbiino,int days){
+        String[] options = {"Osta jäätist",
+                            "Muuda hinda",
+                            "Mine müüma"};
+        String message ="Päev: "+days+"\n"+
+                name+"\n"+
+                "Raha: "+Math.round(currentMoney * 100.0)/100.0+" eurot\n"+
+                "Omatud jäätised"+"\n"+
+                "Vanilje jäätis: "+VanillaNr+"\n"+
+                        "MüümisHind: "+Vanilla_price+" ;SoetamisHind: "+balbiino.getVanilla_Sell_price()+"\n"+
+                "Šokolaadi jäätis: "+ChocoNr+"\n"+
+                        "MüümisHind: "+Choco_price+" ;SoetamisHind: "+balbiino.getChoco_Sell_price()+"\n"+
+                "Mahlapulk: "+PopsicleNr+"\n"+
+                        "MüümisHind: "+Popsicle_price+" ;SoetamisHind: "+balbiino.getPopsicle_Sell_price()+"\n";
+
+        int option = JOptionPane.showOptionDialog(null,
+                message,
+                "Jäätisemäng",
+                JOptionPane.YES_NO_CANCEL_OPTION,
+                JOptionPane.INFORMATION_MESSAGE,
+                null,
+                options,
+                0);
+        return option;
     }
 
     public double getCurrentMoney() {
@@ -18,8 +57,7 @@ public class Player {
     public String getName() {
         return name;
     }
-<<<<<<< Updated upstream
-=======
+ main
 
     public void setVanilla_price(double vanilla_price) {
         Vanilla_price = vanilla_price;
@@ -90,7 +128,10 @@ public class Player {
     }
 
     public void ResetDaily(){
+ Priit
+
         
+ main
         SoldChoco = 0;
         SoldPopsicle = 0;
         SoldVanilla = 0;
@@ -160,5 +201,8 @@ public class Player {
             }
         }
     }
->>>>>>> Stashed changes
+ Priit
+
+ Stashed changes
+ main
 }
