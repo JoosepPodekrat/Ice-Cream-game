@@ -57,6 +57,7 @@ public class Player {
     public String getName() {
         return name;
     }
+ main
 
     public void setVanilla_price(double vanilla_price) {
         Vanilla_price = vanilla_price;
@@ -127,6 +128,10 @@ public class Player {
     }
 
     public void ResetDaily(){
+ Priit
+
+        
+ main
         SoldChoco = 0;
         SoldPopsicle = 0;
         SoldVanilla = 0;
@@ -196,4 +201,8 @@ public class Player {
             }
         }
     }
+ Priit
+
+ Stashed changes
+ main
 }
