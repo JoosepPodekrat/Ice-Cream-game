@@ -1,0 +1,19 @@
+Joosep Podekrat ja Priit Teelahk
+
+
+IceCreamGame - Mängu UI javaFXis, selle meetodid näitavad mängu erinevaid juppe ja tegutsevad nuppude jms kontrollimisega.
+Balbiino - Jäätise hindade kontrollimise klass, hindade muutmine on tähtsaim meetod.
+Customer - NPC-de klass, nende set ja get meetodid.
+Events - Korraldab NPC-de tegemist, päevaseid muutusi mängus, sisaldab mõningaid lisainfot päevade kohta.
+Player - Mängija omaduste klass, peamiselt get-set, aga sisaldab ka poest jäätise ostmist ja osa müümise loogikas Bought ja buyX meetodide abil.
+SaveSystem - Salvestussüsteem, mis salvestab DataOutputStreami abil failidesse ja loeb neist.
+
+
+
+
+Protsess: Projekti tegemisele läks mitmeid kordi rohkem aega, kui arvasime. Kuna JOptionPane-is oli juba algne versioon valmis, lootsime, et ümber portimine on kiire. See ei olnud seda, kuna kogu loogika tuli uuesti üles ehitada ja uusi funktsioone lisades läks ajakulu umbes neljakordseks võrreldes esimese versiooniga.Priit tegi suurema osa Back endist, Joosep enamuse Front endist, kirjutasime ühes kõnes koodi, seega aitasime üksteist pidevalt, kuidas oskasime. Taustapildi tegi Kevin Kaatsu, Joosepi sõber.
+
+
+JavaFXi eri meetodid, näiteks bind pidevaks uuendamiseks ei suutnud tööle saada, mõningate teiste meetodite puhul kulus mitmeid tunde, et korralikult tööle saada.
+7/10 Mäng ise on suhteliselt igav.
+Igat uut funktsiooni lisades testisime need läbi vastavalt funktsiooni eesmärgile, näiteks salvestussüsteemile tegime mitu mängijat, salvestasime neid ja salvestasime vanu mängijaid üle, et kontrollida andmete terviklikkust. Mängisime kogu mängu paar korda läbi, et olla kindel, et vales järjekorras asju tehes ei lähe midagi katki.
